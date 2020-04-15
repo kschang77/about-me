@@ -6,7 +6,7 @@ I worked on a LOT of projects during my bootcamp, and even before that. I actual
 
 I already have git-bash installed, and my github account all ready to go. 
 
-1) I go to github and create a new repo under my account called assignment7, generate a default README
+1) I go to github and create a new repo under my account called assignment7, generate a default README. You can also create a LICENSE now. AND maybe the .gitignore as well. Choose the environment you usually program in. Or just leave it out. 
 
 2) I go ahead create a LICENSE file and pick MIT licnese
 
@@ -73,11 +73,31 @@ assignment7 git@github.com:yourname/assignment7.git (push)
 
 Good, connection has been estalished both ways: fetch, and push. However, you need to do one more thing... git needs to know which BRANCH to push onto. Generally, it'd be master, UNLESS you're working off a different branch with checkout, branch, and so. As we're just setting up, it'll be master. Basically, we're saying 'merge what I got with the master and leave it as default'. 
 
+Now we need to specify the default as origin master
+
 ```
-git push --set-upstream assignment7 master
+git remote add origin git@github.com:yourname/assignment7.git
 ```
 
-If you run into an error here, like "failed to push some refs", that means your subdir and the repo has conflicts and/or different versions. This often happens when you did the LICENSE thing, or edited the README.md on github directily, thus made changes in the remote, and it no longer matched the local. Usually you can fix this by doing a git pull first (i.e. grab what the remote repo has, so you have the lastest), THEN do the git push ... again.  
+This means you are adding the remote repo as your "origin", i.e. root of project. (even before "master") 
+
+Now do a 
+
+```
+git pull origin master
+```
+
+This will download any files you got in the repo, such as LICENSE and README.md, down to your local repo, and merge it with the files you have locally. 
+
+Now you can do
+
+```
+git add .
+git commit -m "YYYYMMDD Some commit message" 
+git push
+```
+
+If you run into an error here, like "failed to push some refs", that means you forgot to do the pull, your subdir and the repo has conflicts and/or different versions. This often happens when you did the LICENSE thing, or edited the README.md on github directily, thus made changes in the remote, and it no longer matched the local. Usually you can fix this by doing a git pull first (i.e. grab what the remote repo has, so you have the lastest), THEN do the git push ... again.  
 
 if that doesn't seem to work, you can always override the error message by adding "-f" parameter to that git push line. This basically tells the git push to ignore any errors, full steam ahead, oveerwrite remote with local copy. 
 
