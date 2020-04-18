@@ -8,7 +8,7 @@ I already have git-bash installed, and my github account all ready to go.
 
 1) I go to github and create a new repo under my account called assignment7, generate a default README. You can also create a LICENSE now. AND maybe the .gitignore as well. Choose the environment you usually program in. Or just leave it out. 
 
-2) I go ahead create a LICENSE file and pick MIT licnese
+2) (OPTIONAL) I go ahead create a LICENSE file and pick MIT licnese, if you haven't done it at creation
 
 3) I go to clone or download button and get the git@..... string and copy that into clipboard 
 
@@ -22,7 +22,7 @@ I already have git-bash installed, and my github account all ready to go.
 git clone (paste the git string wtih right-click)
 ```
 
-This will create a subdir called assignment7, same name as your repo, and download the two files in the repo, LICENSE and README.md (which is mostly blank). This actually also links your current directory with the "remote repo", i.e. the one on github, that you can push to or pull from. 
+This will create a subdir called assignment7, same name as your repo, and download the two files in the repo, LICENSE and README.md (which is mostly blank). NOTE: If you did not create a license, then you'd just have README.md)  This actually also links your current directory with the "remote repo", i.e. the one on github, that you can push to or pull from. 
 
 7) Now, on your PC (locally), add files to this subdir, usually by copying some files you downloaded off the school gitlab server specific to this assignment, probably pre-defined tests, assignment details, sample screenshots, and so on. I prefer to keep them all in one place, and delete the extra stuff whent he project is done, but it's up to you, 
 
@@ -35,6 +35,14 @@ git push
 ```
 
 To push all the changes to github repo. 
+
+NOTE: I personally use this commit message format
+
+YYYYMMDD XX  short message here
+
+YYMMDD is the date, like 20200417 = April 17, 2020
+
+XX is initials, like I'm "KC"    Though this is technically redundant as each commit is datestamped, but I find it comforting to know I can read the date of each commit at a glance. :D
 
 9) Verify that all the changes had been uploaded into the repo by going to github and refesh the screen . 
 
@@ -89,8 +97,56 @@ git pull origin master
 
 This will download any files you got in the repo, such as LICENSE and README.md, down to your local repo, and merge it with the files you have locally. 
 
-Now you can do
+One more OPTIONAL thing... You need to setup your "upstream" by entering
 
+```
+git push --set-upstream origin master
+```
+
+This sets up your "default" push target to origin/master branch
+
+Obviously if you work on a different branch, you'll need to change that. But as we just created this, origin/master will be fine. 
+
+If you don't do this, you can still git push fine, but you just have to type out
+
+```
+git push origin master
+```
+
+instead of 
+
+```
+git push
+```
+
+This is also a good time to setup your node modules if you're doing that. 
+
+```
+npm init -y
+npm install
+```
+And maybe manually install node modules you need like _mysql_, _inquirer_, _express_, and so on. 
+
+Though this also necesitates the creation of .gitignore files. Which you should read at
+
+https://git-scm.com/docs/gitignore
+
+Though a simple .gitignore file, which as the name suggests, tells git to IGNORE stuff, would have 3 lines:
+
+```
+*
+*/
+.gitignore
+```
+
+The three lines basically says:
+* ignore EVERYTHING in this subdirectory  (*)
+* ignore everything in the subdirectory below this (*/)
+* ignore this file that you're reading (.gitignore)
+
+Within context of git, of course. After all, you don't want to sync the bajillion modules in node_modules directory. Or stuff that you don't want sync'ed to a public repo on Github. 
+
+Any way, not that your directory is all setup, it's time to sync the remote with your local. Go ahead and do
 ```
 git add .
 git commit -m "YYYYMMDD Some commit message" 
