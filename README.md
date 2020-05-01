@@ -1,6 +1,44 @@
+Hi, I am Kasey Chang, a multi-phasic software developer-engineer
+
+This is a roughdraft of my updated portfolio page. So pardy the (lack of) layout
+
+#fullstack #datascience #it #techsupport #machinelearning #cybersecurity #python #startrek #littleabouteverything #pcgaming #hardware
+
+#English #Chinese(Mandarin) #Cantonese #Spanish-limited
+
+
+
+
+
+
+
+
 # Some Personal Notes on setup
 
 My setup is probably a bit perculair. 
+
+I'm a PC guy, and at home I run a i7-9700K (water-cooled) with an RTX2070, driving 2 24-inch (mis-matched) monitors. I can probably get a 3rd monitor running (the card will support it, and I do have a spare monitor), but I don't have the desk space. 
+
+I have a 17 inch HP laptop for mobile stuff. It replaced a Dell XPS 17th laptop I bought off eBay almost 10 years ago. First gen Core i7 and all that. In fact, for the longest time, that was my primary PC. 
+
+At this moment I am using a Velocifire mechanical keyboard, a Logitech G500S mouse, and a Roccat headset, when I don't want to Bluetooth my audio. 
+
+Software wise... 
+
+* Notepad++ -- my goto text editor. With markdown extension installed, it's multi-purpose
+* VS Code -- my goto code editor, multi-window and all that. 
+* Git Bash -- I actually knew a fair bit of shell programming due to several *nix courses I took. 
+* Postman -- invaluable testing APIs and whatnot
+* Vysor -- remote control your Android through wired ADB, or wireless (freemium), I use it when I don't want to "type" on the soft keyboard. I can control it from my desktop. 
+
+On the other hand, for Python I do use PyCharm, and sometimes I do use Atom and good old notebook.exe for some things. 
+
+
+
+
+
+
+# My Git / Github setup
 
 I worked on a LOT of projects during my bootcamp, and even before that. I actually started this Github account back in 2015, before I even really know how to use Github. Now that I have the account, and using it for the past month in the Bootcamp, this is how I do it.
 
